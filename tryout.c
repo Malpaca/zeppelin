@@ -3,6 +3,6 @@
 
 int main(int argc, char ** argv){
     int a = atoi(argv[1]);
-    printf("%d\n", a);
-    return 0;
+    // printf("%d\n", a);
+    return a;
 }
