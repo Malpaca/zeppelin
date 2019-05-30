@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head data-suburl="/git">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	
+		<meta name="author" content="src-code/git" />
+		<meta name="description" content="src-code/git is a painless self-hosted Git service" />
+		<meta name="keywords" content="git, simons-rock, src-code">
+	
+	<meta name="referrer" content="no-referrer" />
+	<meta name="_csrf" content="yaptFedXXz9cXW9VoUgfTQJltgk6MTU1OTE1NzA4ODc4NzU0OTA4Nw==" />
+	<meta name="_suburl" content="/git" />
+
+	
+	
+		<meta property="og:url" content="https://src-code.simons-rock.edu/git/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="src-code/git">
+		<meta property="og:description" content="src-code/git is a painless self-hosted Git service.">
+		<meta property="og:image" content="https://src-code.simons-rock.edu/git/img/gogs-lg.png" />
+		<meta property="og:site_name" content="src-code/git">
+	
+
+	<link rel="shortcut icon" href="/git/img/favicon.png" />
+
+	<script src="/git/js/jquery-1.11.3.min.js"></script>
+	<script src="/git/js/libs/jquery.are-you-sure.js"></script>
+	<link rel="stylesheet" href="/git/assets/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/git/assets/octicons-4.3.0/octicons.min.css">
+
+	
+	
+
+	
+
+	
+	<link rel="stylesheet" href="/git/css/semantic-2.2.10.min.css">
+	<link rel="stylesheet" href="/git/css/gogs.css?v=5a12cd34a2347ccb12328afedb30be7a">
+
+	
+	<script src="/git/js/semantic-2.2.10.min.js"></script>
+	<script src="/git/js/gogs.js?v=5a12cd34a2347ccb12328afedb30be7a"></script>
+
+	<title>Page Not Found - src-code/git</title>
+
+	<meta name="theme-color" content="#ff5343">
+
+	
+</head>
+<body>
+	<div class="full height">
+		<noscript>Please enable JavaScript in your browser!</noscript>
+
+		
+			<div class="following bar light">
+				<div class="ui container">
+					<div class="ui grid">
+						<div class="column">
+							<div class="ui top secondary menu">
+								<a class="item brand" href="/git/">
+									<img class="ui mini image" src="/git/img/favicon.png">
+								</a>
+
+								
+									<a class="item" href="/git/">Home</a>
+								
+
+								<a class="item" href="/git/explore/repos">Explore</a>
+								
+
+								
+
+									<div class="right menu">
+										
+										<a class="item" href="/git/user/login?redirect_to=%2fgit%2fyliu17%2fSUFFIX_RANK%2fsrc%2fmaster%2fSummer2019%2ftests%2fprint_num">
+											<i class="octicon octicon-sign-in"></i> Sign In
+										</a>
+									</div>
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+
+<div class="ui container center">
+	<p style="margin-top: 100px"><img src="/git/img/404.png" alt="404"/></p>
+	<div class="ui divider"></div>
+	<br>
+	<p>If you think this is an error, please open an issue <a href="https://src-code.simons-rock.edu/infra/gogs/issues/new">here</a>.</p>
+</div>
+
+	</div>
+	<footer>
+		<div class="ui container">
+			<div class="ui left">
+				Copyright © 2017 Dennis Chen.
+				
+					Version: 0.11.28.0718
+				
+				
+					Page: <strong>6ms</strong>
+					Template: <strong>0ms</strong>
+				
+			</div>
+			<div class="ui right links">
+				<a href="/assets/librejs/librejs.html" style="display:none" data-jslicense="1">Javascript Licenses</a>
+				<a target="_blank" href="https://src-code.simons-rock.edu">Website</a>
+				<span class="version">Go1.8.1</span>
+			</div>
+		</div>
+	</footer>
+</body>
+
+
+
+
+
+
+<script src="/git/js/libs/emojify-1.1.0.min.js"></script>
+<script src="/git/js/libs/clipboard-1.5.9.min.js"></script>
+
+
+</html>
+
