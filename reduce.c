@@ -4,16 +4,16 @@
 
 int main(int argc, char ** argv){
 	char fname[50];
-    int buf [9999];
+    int arr [4] = {0};
+    int buf[4];
+    int read;
     FILE * f;
     for (int i = 0; i < 14; i++){
         sprintf (fname, "output/count_%d", i);
     	f = fopen(fname, "rb");
-        while (fgets (buf, 9999, f)!=NULL ) {
-            buf[strcspn(buf, "\r\n")] = '\0';
-            line_len = strlen(buf);
-            for (i=0; i< line_len; i++) {
-                arr[buf[i] - 'a'] += 1;
+        while ((read = fread (buf,sizeof(int),1,f)) > 0) {
+            for (i=0; i< read; i++) {
+                arr[i] += buf[i];
             }
         }
         fclose(f);
