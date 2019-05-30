@@ -11,9 +11,10 @@ int main(int argc, char ** argv){
     for (int i = 0; i < 14; i++){
         sprintf (fname, "output/count_%d", i);
     	f = fopen(fname, "rb");
-        while ((read = fread (buf,sizeof(int),1,f)) > 0) {
-            for (i=0; i< read; i++) {
-                arr[i] += buf[i];
+        while ((read = fread (buf,sizeof(int),4,f)) > 0) {
+            for (int j=0; j< read; j++) {
+                printf("%d:%d\n", i, buf[j]);
+                arr[j] += buf[j];
             }
         }
         fclose(f);
