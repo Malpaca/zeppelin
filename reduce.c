@@ -9,7 +9,7 @@ int main(int argc, char ** argv){
     int read;
     FILE * f;
     for (int i = 0; i < 14; i++){
-        sprintf (fname, "parallel_try/output/count_%d", i);
+        sprintf (fname, "output/count_%d", i);
     	f = fopen(fname, "rb");
         while ((read = fread (buf,sizeof(int),4,f)) > 0) {
             for (int j=0; j< read; j++) {
@@ -19,7 +19,7 @@ int main(int argc, char ** argv){
         }
         fclose(f);
     }
-    sprintf (fname, "parallel_try/output/count_total");
+    sprintf (fname, "output/count_total");
 	f = fopen(fname, "w");
     if (f == NULL){
         printf("can't open file: %s",fname);
