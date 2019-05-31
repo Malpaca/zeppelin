@@ -11,7 +11,7 @@ EMPTY=2
 
 STATE=$SUCCESS
 
-TRUESTART=$(gdate +%s.%N)
+##TRUESTART=$(gdate +%s.%N)
 #Part 0. Preprocessing - convering text files to binary with sentinels
 #need directory input to store binary files with sentinels
 if [[ -d $BINARY_INPUT_DIR ]]
@@ -96,7 +96,7 @@ MORE_RUNS=1
 while (( $MORE_RUNS == 1 ))
 do
     MORE_RUNS=0;
-    START=$(gdate +%s.%N)
+    ##START=$(gdate +%s.%N)
     #clean temp directory for the next iteration
     rm -rf ${TEMP_DIR}/*
 
@@ -115,13 +115,14 @@ do
         exit 1
     fi
 
-    DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
-    printf "Generated local ranks for iteration %d in %.4f seconds\n" $H $DUR
+    ##DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
+    ##printf "Generated local ranks for iteration %d in %.4f seconds\n" $H $DUR
+    printf "Generated local ranks for iteration %d\n" $H
 
     #only if there are ranks to be resolved - continue
     if [[ $STATUS -ne $EMPTY ]]
     then
-        START=$(gdate +%s.%N)
+        ##START=$(gdate +%s.%N)
         #merge local ranks into global ranks - from all the chunks
         ./resolve_global_ranks ${TEMP_DIR}
         STATUS=$?
@@ -131,14 +132,15 @@ do
             exit 1
         fi
 
-        DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
-        printf "Resolved global ranks for iteration %d in %.4f seconds\n" $H $DUR
+        ##DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
+        ##printf "Resolved global ranks for iteration %d in %.4f seconds\n" $H $DUR
+        printf "Resolved global ranks for iteration %d\n" $H
 
         #at least something was resolved
         if [[ $STATUS -ne $EMPTY ]]
         then
             #update local ranks with resolved global ranks
-            START=$(gdate +%s.%N)
+            ##START=$(gdate +%s.%N)
             #valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./update_local_ranks ${RANKS_DIR} ${TEMP_DIR} $H
             ./update_local_ranks ${RANKS_DIR} ${TEMP_DIR} $H
             STATUS=$?
@@ -147,8 +149,9 @@ do
             then
                 exit 1
             fi
-            DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
-            printf "Updated local ranks for iteration %d in %.4f seconds\n" $H $DUR
+            ##DUR=$(echo "$(gdate +%s.%N) - $START" | bc)
+            ##printf "Updated local ranks for iteration %d in %.4f seconds\n" $H $DUR
+            printf "Updated local ranks for iteration %d\n" $H
         fi
     fi
 
@@ -158,6 +161,7 @@ do
     echo
     (( H++ ))
 done
-DUR=$(echo "$(gdate +%s.%N) - $TRUESTART" | bc)
-printf "Total time: %.4f seconds\n" $DUR
+##DUR=$(echo "$(gdate +%s.%N) - $TRUESTART" | bc)
+##printf "Total time: %.4f seconds\n" $DUR
+printf "Finished"
 exit 0
