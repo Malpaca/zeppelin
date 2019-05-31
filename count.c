@@ -7,7 +7,7 @@ int main(int argc, char ** argv){
     char buf [9999];
     int id = atoi(argv[1]);
     int line_len, i;
-    sprintf(fname, "small_input/stuff_%d.txt", id);
+    sprintf(fname, "parallel_try/small_input/stuff_%d.txt", id);
 	FILE * f = fopen(fname, "r");
     if (f == NULL){
         printf("can't open file: %s",fname);
@@ -22,7 +22,7 @@ int main(int argc, char ** argv){
         }
 	}
     fclose(f);
-    sprintf (fname, "output/count_%d", id);
+    sprintf (fname, "parallel_try/output/count_%d", id);
 	f = fopen(fname, "wb");
     if (f == NULL){
         printf("can't open file: %s",fname);
