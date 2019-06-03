@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+int cmpfunc( const void *a, const void *b) {
+	return *(char *)a - *(char *)b;
+}
+
 int main(int argc, char ** argv){
 	char fname[50];
     char buf [9999];
@@ -17,6 +21,16 @@ int main(int argc, char ** argv){
 	while (fgets (buf, 9999, f)!=NULL ) {
 		buf[strcspn(buf, "\r\n")] = '\0';
 		line_len = strlen(buf);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
+		qsort(buf, line_len, sizeof(char), cmpfunc);
         for (i=0; i< line_len; i++) {
             arr[buf[i] - 'a'] += 1;
         }
