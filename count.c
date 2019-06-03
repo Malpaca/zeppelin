@@ -11,7 +11,7 @@ int main(int argc, char ** argv){
     char buf [9999];
     int id = atoi(argv[1]);
     int line_len, i;
-    sprintf(fname, "small_input/stuff_%d.txt", id);
+    sprintf(fname, "dna650MB/stuff_%d.dat", id);
 	FILE * f = fopen(fname, "r");
     if (f == NULL){
         printf("can't open file: %s",fname);
@@ -21,18 +21,11 @@ int main(int argc, char ** argv){
 	while (fgets (buf, 9999, f)!=NULL ) {
 		buf[strcspn(buf, "\r\n")] = '\0';
 		line_len = strlen(buf);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
-		qsort(buf, line_len, sizeof(char), cmpfunc);
         for (i=0; i< line_len; i++) {
-            arr[buf[i] - 'a'] += 1;
+			if (buf[i] == 'A') arr[0]+=1;
+            if (buf[i] == 'C') arr[1]+=1;
+			if (buf[i] == 'T') arr[2]+=1;
+			if (buf[i] == 'G') arr[3]+=1;
         }
 	}
     fclose(f);
